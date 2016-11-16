@@ -9,6 +9,11 @@
  * map_writable to map the pages before stop_machine, then use the
  * mapping inside stop_machine, and unmap the pages afterwards.
  */
+
+/*
+ * free of the returned memory by vfree with page border alignment 
+ */
+
 static void *map_writable(void *addr, size_t len)
 {
         void *vaddr;
