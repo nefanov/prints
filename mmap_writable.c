@@ -1,8 +1,8 @@
 /* this code is exported from KSplice project as example of temporary mapping method in Linux Kernel */
-
+/*
 #include <linux/stop_machine.h>
 int stop_machine(int (*fn)(void *), void *data, const struct cpumask *cpus);
-/*                     ^
+                       ^
                 This function should be in atomic context
 Calling of stop_machine should be executed after map_writable (after vmap call).
                        
