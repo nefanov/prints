@@ -3,7 +3,7 @@
 #include <linux/stop_machine.h>
 int stop_machine(int (*fn)(void *), void *data, const struct cpumask *cpus);
 /*                     ^
-                This function should be int atomic context
+                This function should be in atomic context
 Calling of stop_machine should be executed after map_writable (after vmap call).
                        
 /*
