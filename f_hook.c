@@ -38,6 +38,8 @@ static inline void x86_put_jmp(void * a, void * f, void * t)
 
 #define JMP_INSN_LEN_X86	(1 + 4)
 
+/* x86 dependent code */
+
 static int init_origin_stub_x86(khookstr_t * s)
 {
 	ud_t ud;
