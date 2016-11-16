@@ -1,0 +1,25 @@
+/*
+ * Hooking structure
+ */
+typedef struct {
+	/* tagret's name */
+	char * name;
+
+ 	/* target's insn length */
+	int length;
+
+	/* target's handler address */
+	void * handler;
+
+	/* target's address and rw-mapping */
+	void * target;
+	void * target_map;
+
+	/* origin's address and rw-mapping */
+	void * origin;
+	void * origin_map;
+
+	atomic_t usage;
+} khookstr_t;
+
+extern khookstr_t __khook_start[], __khook_finish[];
