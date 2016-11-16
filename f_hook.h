@@ -1,3 +1,5 @@
+#include <linux/stop_machine.h>
+
 /* this header includes udis86-disassembler. It should be wrapped into #ifdef x86 condition directive */
 #include <udis86.h>
 /*
