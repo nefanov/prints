@@ -1,5 +1,6 @@
 /*
-This function sets WP bit to zero to allow writing into a memory pages of Linux Kernel;
+This function sets WP bit to zero to allow writing into a memory pages of x86 Linux Kernel;
+Code is SMP-unsafe;
 */
 
 static inline unsigned long native_pax_open_kernel(void)
@@ -15,7 +16,8 @@ static inline unsigned long native_pax_open_kernel(void)
 }
 
 /*
-This function restores WP bit to protect Linux Kernel pages from writing;
+This function restores WP bit to protect x86 Linux Kernel pages from writing;
+Code is SMP-unsafe;
 */
 
 static inline unsigned long native_pax_close_kernel(void)
