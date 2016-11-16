@@ -1,4 +1,5 @@
 #include "fhook.h"
+/* some code is copied from milabs projects */
 
 static int init_hooks_x86(void)
 {
